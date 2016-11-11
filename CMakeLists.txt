@@ -18,6 +18,9 @@ ExternalProject_Add(sophus_src
   INSTALL_COMMAND make install
 )
 
+cs_add_library(${PROJECT_NAME} src/dependency_tracker.cc)
+add_dependencies(${PROJECT_NAME} sophus_src)
+
 cs_install()
 install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/sophus/
   DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
