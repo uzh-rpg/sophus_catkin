@@ -22,11 +22,11 @@ cs_add_library(${PROJECT_NAME} src/dependency_tracker.cc)
 add_dependencies(${PROJECT_NAME} sophus_src)
 
 cs_install()
-install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/sophus/
+install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/include/sophus
   DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}
   FILES_MATCHING
   PATTERN "*.hpp"
 )
 
-cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include/sophus/
+cs_export(INCLUDE_DIRS ${CATKIN_DEVEL_PREFIX}/include/
   CFG_EXTRAS sophus-extras.cmake)
